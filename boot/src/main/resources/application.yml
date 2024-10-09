@@ -1,6 +1,6 @@
 muyun:
   debug: true
-  super-user-id: 1
+  super-user-id: 1 #超级管理员ID
 
 quarkus:
   http:

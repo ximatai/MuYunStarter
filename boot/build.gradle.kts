@@ -27,3 +27,7 @@ configurations.all {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.named("quarkusDependenciesBuild") {
+    mustRunAfter(tasks.named("jandex"))
+}
