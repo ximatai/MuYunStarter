@@ -5,7 +5,6 @@ import jakarta.inject.Inject;
 import net.ximatai.muyun.database.IDatabaseOperationsStd;
 import net.ximatai.muyun.demo.DemoConst;
 import net.ximatai.muyun.demo.MyDemoController;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -39,7 +38,6 @@ public class TestMyDemoController {
         assertEquals("test", row.get("v_name"));
     }
 
-    @Disabled
     @Test
     void testCreateOverHTTP() {
         String id = given()
@@ -48,7 +46,7 @@ public class TestMyDemoController {
                         "v_name", "test"
                 ))
                 .when()
-                .post("%s/test/create".formatted(base))
+                .post("/api/%s/test/create".formatted(base))
                 .then()
                 .statusCode(200)
                 .extract()
