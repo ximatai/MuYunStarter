@@ -10,6 +10,7 @@ dependencies {
     implementation(libs.muyun.core)
     implementation(libs.muyun.database.std)
     implementation(libs.muyun.platform)
+    implementation(libs.muyun.proxy)
     implementation(project(":demo"))
 
     testImplementation("io.quarkus:quarkus-junit5")

@@ -1,7 +1,14 @@
 muyun:
   debug: true
   super-user-id: 1 #超级管理员ID
-
+frontend:
+  resources:
+    - prefix: /web1/
+      path: /Users/workspace/xxx/dist
+proxy:
+  upstreams:
+    - prefix: /web2/
+      url: http://localhost:3000/
 quarkus:
   http:
     port: 8080
