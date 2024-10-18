@@ -11,5 +11,8 @@ demo 项目是用来写业务代码的地方，fork本项目后，应该把demo�
 项目打包：
 ` ./gradlew :boot:build -Dquarkus.package.jar.type=uber-jar`
 
+项目打包（跳过单元测试）：
+` ./gradlew :boot:build -Dquarkus.package.jar.type=uber-jar -x test`
+
 运行jar包：
 `java -jar boot/build/boot-1.0-SNAPSHOT-runner.jar`
