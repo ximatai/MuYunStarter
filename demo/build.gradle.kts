@@ -6,7 +6,7 @@ plugins {
 dependencies {
     api(libs.muyun.core)
     api(libs.muyun.database.std)
-    api(libs.muyun.authorization)
+    api("io.quarkus:quarkus-scheduler")
 
 //    api(libs.caffeine)
 }
