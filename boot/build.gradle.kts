@@ -7,7 +7,7 @@ dependencies {
     implementation(enforcedPlatform(libs.quarkus.platform.bom))
     implementation("io.quarkus:quarkus-config-yaml")
 
-    implementation(libs.muyun.core)
+//    implementation(libs.muyun.core)
     implementation(libs.muyun.database.std)
 
     implementation(project(":demo"))

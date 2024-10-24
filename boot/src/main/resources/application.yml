@@ -1,25 +1,4 @@
-muyun:
-  debug: true
-  super-user-id: 1 #超级管理员ID
-web:
-  redirects: # 支持配置301跳转
-    - from: /
-      to: /web/
-frontend:
-  resources:
-    - prefix: /web1/
-      path: /Users/workspace/xxx/dist
-proxy:
-  upstreams:
-    - prefix: /web2/
-      url: http://localhost:3000/
 quarkus:
-  http:
-    port: 8080
-    # root-path: /api
-  rest:
-    path: /api
-
   datasource:
     db-kind: postgresql
     username: postgres
