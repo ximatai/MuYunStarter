@@ -1,22 +1,18 @@
-muyun:
-  debug: true
-  super-user-id: 1 #超级管理员ID
 web:
   redirects: # 支持配置301跳转
     - from: /
       to: /web/
-frontend:
+frontend: # 支持配置前端文件夹
   resources:
     - prefix: /web1/
       path: /Users/workspace/xxx/dist
-proxy:
+proxy: # 内嵌反向代理服务器
   upstreams:
     - prefix: /web2/
       url: http://localhost:3000/
 quarkus:
   http:
     port: 8080
-    # root-path: /api
   rest:
     path: /api
 
@@ -26,10 +22,6 @@ quarkus:
     password: muyun2024
     jdbc:
       url: jdbc:postgresql://localhost:54324/muyun
-#      enabled: true
-    # reactive:
-    #   url: vertx-reactive:postgresql://localhost:54324/muyun
-
   banner:
     path: banner.txt
 
@@ -51,6 +43,5 @@ quarkus:
       level: DEBUG
       format: "%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{3.}] (%t) %s%e%n"
       rotation:
-#        max-file-count: 7
         file-suffix: .yyyy-MM-dd
         rotate-on-boot: true
