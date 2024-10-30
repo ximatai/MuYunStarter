@@ -1,6 +1,6 @@
 [versions]
 quarkus = "3.15.1"
-muyun = "0.1.1"
+muyun = "1.0.0-SNAPSHOT"
 caffeine = "3.1.8"
 testcontainers = "1.20.1"
 
