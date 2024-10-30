@@ -1,12 +1,15 @@
 plugins {
     java
+    id("org.kordamp.gradle.jandex") version "2.1.0"
 }
 
 allprojects {
-    apply(plugin = "java")
-    apply(plugin = "configure-jandex")
+    apply {
+        plugin("java")
+        plugin("org.kordamp.gradle.jandex")
+    }
 
-    group = "net.ximatai.muyun"
+    group = "net.ximatai.muyun.starter"
     version = "1.0-SNAPSHOT"
 
     java {
@@ -15,6 +18,7 @@ allprojects {
     }
 
     repositories {
+        mavenLocal()
         maven { url = uri("https://mirrors.cloud.tencent.com/repository/maven") }
         maven { url = uri("https://maven.aliyun.com/repository/public") }
         maven {
@@ -22,5 +26,9 @@ allprojects {
             isAllowInsecureProtocol = true
         }
         mavenCentral()
+    }
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor(0, "seconds")
     }
 }

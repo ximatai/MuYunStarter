@@ -10,6 +10,7 @@ dependencies {
     implementation(libs.muyun.core)
     implementation(libs.muyun.database.std)
     implementation(libs.muyun.proxy)
+    implementation(libs.muyun.fileserver)
     implementation(libs.muyun.platform)
     implementation(libs.muyun.log)
     implementation(project(":demo"))
@@ -20,10 +21,6 @@ dependencies {
     testImplementation("io.quarkus:quarkus-agroal")
     testImplementation("io.quarkus:quarkus-jdbc-postgresql")
     testImplementation(libs.testcontainers.postgresql)
-}
-
-configurations.all {
-    resolutionStrategy.cacheChangingModulesFor(0, "seconds")
 }
 
 tasks.test {
