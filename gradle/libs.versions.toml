@@ -1,6 +1,7 @@
 [versions]
 quarkus = "3.15.1"
-muyun = "1.0.0-SNAPSHOT"
+#muyun = "1.0.0-SNAPSHOT"
+muyun = "0.1.1"
 caffeine = "3.1.8"
 testcontainers = "1.20.1"
 
@@ -13,6 +14,7 @@ muyun-platform = { module = "net.ximatai.muyun:muyun-platform", version.ref = "m
 muyun-proxy = { module = "net.ximatai.muyun:muyun-proxy", version.ref = "muyun" }
 muyun-log = { module = "net.ximatai.muyun:muyun-log", version.ref = "muyun" }
 muyun-authorization = { module = "net.ximatai.muyun:muyun-authorization", version.ref = "muyun" }
+muyun-fileserver = { module = "net.ximatai.muyun:muyun-fileserver", version.ref = "muyun" }
 caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version.ref = "caffeine" }
 
 [plugins]
