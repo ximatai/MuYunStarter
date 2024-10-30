@@ -10,6 +10,7 @@ dependencies {
     implementation(libs.muyun.core)
     implementation(libs.muyun.database.std)
     implementation(libs.muyun.proxy)
+//    implementation(libs.muyun.fileserver)
 //    implementation(libs.muyun.platform)
 //    implementation(libs.muyun.log)
     implementation(project(":demo"))
