@@ -23,10 +23,6 @@ dependencies {
     testImplementation(libs.testcontainers.postgresql)
 }
 
-configurations.all {
-    resolutionStrategy.cacheChangingModulesFor(0, "seconds")
-}
-
 tasks.test {
     useJUnitPlatform()
 }
