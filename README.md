@@ -9,7 +9,7 @@ demo 项目是用来写业务代码的地方，fork本项目后，应该把demo�
 `docker run --rm  -p 54324:5432 -e POSTGRES_PASSWORD=muyun2024 -e POSTGRES_DB=muyun  postgres:17-alpine`
 
 项目启动：
-`./gradlew :boot:quarkusDev`
+`./gradlew --console=plain :boot:quarkusDev`
 
 项目打包：
 ` ./gradlew :boot:build -Dquarkus.package.jar.type=uber-jar`

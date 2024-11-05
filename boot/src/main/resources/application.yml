@@ -8,8 +8,8 @@ frontend: # 支持配置前端文件夹
       path: /Users/workspace/xxx/dist
 proxy: # 内嵌反向代理服务器
   upstreams:
-    - prefix: /web2/
-      url: http://localhost:3000/
+    - prefix: /web/
+      url: http://localhost:8001/web/
 quarkus:
   http:
     port: 8080
