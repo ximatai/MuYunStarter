@@ -1,10 +1,12 @@
 package net.ximatai.muyun.demo.test;
 
+import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
 import net.ximatai.muyun.database.IDatabaseOperationsStd;
 import net.ximatai.muyun.demo.DemoConst;
 import net.ximatai.muyun.demo.MyDemoController;
+import net.ximatai.muyun.demo.test.testcontainers.PostgresTestResource;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -14,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @QuarkusTest
-//@QuarkusTestResource(value = PostgresTestResource.class, restrictToAnnotatedClass = true)
+@QuarkusTestResource(value = PostgresTestResource.class, restrictToAnnotatedClass = true)
 public class TestMyDemoController {
 
     String base = DemoConst.BASE_PATH;
