@@ -1,5 +1,5 @@
 [versions]
-quarkus = "3.16.1"
+quarkus = "3.16.3"
 #muyun = "1.0.0-SNAPSHOT"
 muyun = "0.1.5"
 caffeine = "3.1.8"
