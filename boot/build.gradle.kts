@@ -12,6 +12,7 @@ dependencies {
     implementation(libs.muyun.proxy)
     implementation(libs.muyun.fileserver)
     implementation(libs.muyun.platform)
+    implementation(libs.muyun.runtime.session)
     implementation(libs.muyun.log)
     implementation(project(":demo"))
 

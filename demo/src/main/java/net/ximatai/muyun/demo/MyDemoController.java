@@ -4,6 +4,7 @@ import io.quarkus.runtime.Startup;
 import jakarta.ws.rs.Path;
 import net.ximatai.muyun.base.BaseScaffold;
 import net.ximatai.muyun.database.builder.Column;
+import net.ximatai.muyun.database.builder.ColumnType;
 import net.ximatai.muyun.database.builder.TableWrapper;
 
 @Startup
@@ -19,7 +20,7 @@ public class MyDemoController extends BaseScaffold {
     public void fitOut(TableWrapper wrapper) {
         wrapper
                 .setPrimaryKey(Column.ID_POSTGRES)
-                .addColumn(Column.of("v_name").setType("varchar"))
+                .addColumn(Column.of("v_name").setType(ColumnType.VARCHAR))
                 .addColumn(Column.of("t_create").setDefaultValue("now()"));
     }
 
