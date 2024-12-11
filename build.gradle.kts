@@ -20,7 +20,7 @@ allprojects {
     repositories {
         mavenLocal()
         maven {
-            url = uri("http://192.168.3.19:8081/repository/maven-public/")
+            url = uri("http://192.168.6.205:8081/repository/maven-public/")
             isAllowInsecureProtocol = true
         }
         maven { url = uri("https://mirrors.cloud.tencent.com/repository/maven") }
