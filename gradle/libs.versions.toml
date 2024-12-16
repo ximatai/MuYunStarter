@@ -1,7 +1,7 @@
 [versions]
-quarkus = "3.17.2"
+quarkus = "3.17.4"
 muyun = "1.0.0-SNAPSHOT"
-#muyun = "0.1.7"
+#muyun = "0.1.9"
 caffeine = "3.1.8"
 testcontainers = "1.20.3"
 
