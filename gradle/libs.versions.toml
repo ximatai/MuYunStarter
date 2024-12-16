@@ -12,6 +12,7 @@ muyun-core = { module = "net.ximatai.muyun:muyun-core", version.ref = "muyun" }
 muyun-database-std = { module = "net.ximatai.muyun:muyun-database-std", version.ref = "muyun" }
 muyun-platform = { module = "net.ximatai.muyun:muyun-platform", version.ref = "muyun" }
 muyun-runtime-session = { module = "net.ximatai.muyun:muyun-runtime-session", version.ref = "muyun" }
+muyun-runtime-gateway = { module = "net.ximatai.muyun:muyun-runtime-gateway", version.ref = "muyun" }
 muyun-proxy = { module = "net.ximatai.muyun:muyun-proxy", version.ref = "muyun" }
 muyun-log = { module = "net.ximatai.muyun:muyun-log", version.ref = "muyun" }
 muyun-authorization = { module = "net.ximatai.muyun:muyun-authorization", version.ref = "muyun" }
