@@ -1,3 +1,5 @@
+file-server:
+  upload-path: ./fileUploads/
 web:
   redirects: # 支持配置301跳转
     - from: /
