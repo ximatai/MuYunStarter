@@ -1,8 +1,8 @@
 [versions]
-quarkus = "3.17.4"
+quarkus = "3.19.1"
 #muyun = "1.0.0-SNAPSHOT"
-muyun = "0.1.9"
-caffeine = "3.1.8"
+muyun = "0.1.11"
+caffeine = "3.2.0"
 testcontainers = "1.20.3"
 
 [libraries]
