@@ -1,15 +1,14 @@
 [versions]
-quarkus = "3.19.1"
+quarkus = "3.27.1"
 #muyun = "1.0.0-SNAPSHOT"
-muyun = "0.1.11"
-caffeine = "3.2.0"
-testcontainers = "1.20.3"
+muyun = "0.1.13"
+caffeine = "3.2.3"
+testcontainers-core = "2.0.2"
+testcontainers = "1.21.3"
 
 [libraries]
 quarkus-platform-bom = { module = "io.quarkus.platform:quarkus-bom", version.ref = "quarkus" }
-testcontainers-postgresql = { module = "org.testcontainers:postgresql", version.ref = "testcontainers" }
 muyun-core = { module = "net.ximatai.muyun:muyun-core", version.ref = "muyun" }
-muyun-database-std = { module = "net.ximatai.muyun:muyun-database-std", version.ref = "muyun" }
 muyun-platform = { module = "net.ximatai.muyun:muyun-platform", version.ref = "muyun" }
 muyun-runtime-session = { module = "net.ximatai.muyun:muyun-runtime-session", version.ref = "muyun" }
 muyun-runtime-gateway = { module = "net.ximatai.muyun:muyun-runtime-gateway", version.ref = "muyun" }
@@ -17,7 +16,11 @@ muyun-proxy = { module = "net.ximatai.muyun:muyun-proxy", version.ref = "muyun" 
 muyun-log = { module = "net.ximatai.muyun:muyun-log", version.ref = "muyun" }
 muyun-authorization = { module = "net.ximatai.muyun:muyun-authorization", version.ref = "muyun" }
 muyun-fileserver = { module = "net.ximatai.muyun:muyun-fileserver", version.ref = "muyun" }
+muyun-database-jdbi-plugin = { module = "net.ximatai.muyun:muyun-database-jdbi-plugin", version.ref = "muyun" }
 caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version.ref = "caffeine" }
+
+testcontainers = { module = "org.testcontainers:testcontainers", version.ref = "testcontainers-core" }
+testcontainers-postgresql = { module = "org.testcontainers:postgresql", version.ref = "testcontainers" }
 
 [plugins]
 quarkus = { id = "io.quarkus", version.ref = "quarkus" }

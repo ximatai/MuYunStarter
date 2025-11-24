@@ -3,12 +3,17 @@ plugins {
     alias(libs.plugins.quarkus)
 }
 
+configurations.all {
+    resolutionStrategy {
+        force(libs.testcontainers)
+    }
+}
+
 dependencies {
     implementation(enforcedPlatform(libs.quarkus.platform.bom))
     implementation("io.quarkus:quarkus-config-yaml")
 
     implementation(libs.muyun.core)
-    implementation(libs.muyun.database.std)
     implementation(libs.muyun.proxy)
 //    implementation(libs.muyun.fileserver)
 //    implementation(libs.muyun.platform)

@@ -5,6 +5,6 @@ plugins {
 
 dependencies {
     api(libs.muyun.core)
-    api(libs.muyun.database.std)
+    implementation(libs.muyun.database.jdbi.plugin)
 //    api(libs.caffeine)
 }

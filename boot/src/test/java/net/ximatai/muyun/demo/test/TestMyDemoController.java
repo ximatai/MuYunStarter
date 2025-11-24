@@ -3,7 +3,7 @@ package net.ximatai.muyun.demo.test;
 import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
-import net.ximatai.muyun.database.IDatabaseOperationsStd;
+import net.ximatai.muyun.database.core.IDatabaseOperations;
 import net.ximatai.muyun.demo.DemoConst;
 import net.ximatai.muyun.demo.MyDemoController;
 import net.ximatai.muyun.demo.test.testcontainers.PostgresTestResource;
@@ -22,7 +22,7 @@ public class TestMyDemoController {
     String base = DemoConst.BASE_PATH;
 
     @Inject
-    IDatabaseOperationsStd databaseOperations;
+    IDatabaseOperations databaseOperations;
 
     @Inject
     MyDemoController myDemoController;
@@ -55,7 +55,6 @@ public class TestMyDemoController {
                 .asString();
 
         Map<String, Object> row = databaseOperations.row("select * from %s where id = ?".formatted(myDemoController.getMainTable()), id);
-
 
         assertNotNull(row.get("id"));
         assertNotNull(row.get("t_create"));
